@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+   <title>PLAIN</title>
+    <link rel="stylesheet" type="text/css" media="screen"  href="/static/style.css" />
+
+
+
+
+
+
+
+</head>
+<body>
+    <div id="Top">
+        <div class="content">
+            <div style="padding-top: 6px;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td width="110" align="left"><a href="/" name="top" title="way to explore"> <h1>PLAIN</h1></a></td>
+                    <td width="auto" align="left">
+                        <div id="Search"><form onsubmit="return dispatch()"><div style="width: 276px; height: 28px; background-size: 276px 28px;   background-repeat: no-repeat; display: inline-block;"><input type="text" maxlength="40" name="q" id="q" value="" /></div></form></div>
+                    </td>
+                    <td width="570" align="right" style="padding-top: 2px;"><a href="/" class="top">首页</a>&nbsp;&nbsp;&nbsp;<a href="/signup" class="top">注册</a>&nbsp;&nbsp;&nbsp;<a href="/signin" class="top">登录</a></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div id="Wrapper">
+        <div class="content">
+
+            <div id="Leftbar"></div>
+            <div id="Rightbar">
+                <div class="sep20"></div>
+
+
+                    <div class="box">
+                        <div class="cell">
+                            <strong>PLAIN  = way to explore</strong>
+                            <div class="sep5"></div>
+                            <span class="fade"> </span>
+                        </div>
+                        <div class="inner">
+                            <div class="sep5"></div>
+                            <div align="center"><a href="/signup" class="super normal button">现在注册</a>
+                            <div class="sep5"></div>
+                            <div class="sep10"></div>
+                            已注册用户请 &nbsp;<a href="/signin">登录</a></div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="sep20"></div>
+
+
+<div class="box">
+ 
+</div>
+
+ 
+ 
+<div class="sep20"></div>
+<div class="box">
+    <div class="cell"><span class="fade">社区运行状况</span></div>
+    <div class="cell">
+        <table cellpadding="5" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td width="50" align="right"><span class="gray">注册会员</span></td>
+                <td width="auto" align="left"><strong>135633</strong></td>
+            </tr>
+            <tr>
+                <td width="50" align="right"><span class="gray">主题</span></td>
+                <td width="auto" align="left"><strong>214022</strong></td>
+            </tr>
+            <tr>
+                <td width="50" align="right"><span class="gray">回复</span></td>
+                <td width="auto" align="left"><strong>2371517</strong></td>
+            </tr>
+        </table>
+    </div>
+    <div class="inner">
+
+    </div>
+</div>
+<div class="sep20"></div>
+
+
+            </div>
+            <div id="Main">
+                <div class="sep20"></div>
+
+<div class="box">
+    <div class="inner" style="background-color: #fff; border-top-left-radius: 3px; border-top-right-radius: 3px;" id="Tabs">
+
+    </div>
+    <div class="cell" style="background-color: #f9f9f9; padding: 10px 10px 10px 20px;">
+
+    </div>
+
+%for m in posts:
+
+<div class="cell item" style="border-top-left-radius: 3px; border-top-right-radius: 3px;"><div style="position: absolute; margin: -10px -10px 0px 650px;"> </div>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+
+            <td width="48" valign="top" align="center"><strong><a  href="/go/{{m.node}}">{{m.node}}</a></strong></td>
+            <td width="10"></td>
+
+            <td width="auto" valign="middle"><span class="item_title"><a href="/t/{{m.post_id}}">{{m.title}}</a></span>
+            <div class="sep5"></div>
+            <span class="small fade"><div class="votes"></div> &nbsp; &nbsp; <strong><a href="/member/nowcoder"> </a></strong>   </span>
+            </td>
+            <td width="70" align="right" valign="middle">
+
+
+<strong  ><a href="/member/laucie">   {{m.author.name}}</a></strong>
+            </td>
+        </tr>
+    </table>
+</div>
+%end
+
+
+
+    <div class="inner"><div class="fr"><a href="/feed/tab/tech.xml" target="_blank"><img src="/static/img/rss.png" align="absmiddle" style="margin-top:-3px;" border="0" /></a>&nbsp; <a href="/feed/tab/tech.xml" target="_blank">通过 Atom Feed 订阅</a></div>
+        <span class="chevron">→</span> <a href="/recent/{{page}}">更多新主题</a>
+    </div>
+</div>
+
+<div class="sep20"></div>
+ 
+
+
+            </div>
+
+
+        </div>
+        <div class="c"></div>
+        <div class="sep20"></div>
+    </div>
+    <div id="Bottom">
+        <div class="content">
+            <div class="inner">
+                <div class="sep10"></div>
+                    <div class="fr">
+                        <a href="https://www.digitalocean.com/?refcode=1b51f1a7651d" target="_blank"><img src="/static/img/do.png" width="64" border="0" alt="DigitalOcean" /></a>
+                    </div>
+
+                    <div class="sep20"></div>
+sdfsf
+                    <div class="sep5"></div>
+
+                    <div class="sep20"></div>
+
+                    <div class="sep20"></div>
+                    <span class="f12 gray"> </span>
+                <div class="sep10"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+	<script>
+
+
+	</script>
+
+
+
+
+</body>
+</html>
