@@ -40,7 +40,9 @@ class Remark(Model):
         database = db
 db.connect()
 
-
+User.create_table()
+Post.create_table()
+Remark.create_table()
 
 def fetchHtml(url,options):
     headers={'User-Agent':options['user_agent'],"Host":'www.'+options['domain'],'Connection':"keep-alive",'Refer':options['url'],}
@@ -56,7 +58,7 @@ def fetchHtml(url,options):
             retry=retry+1
             print retry
             time.sleep(10)
-    return page
+    return page.decode(options['charset'])
 
 class ScrapIndex(threading.Thread):
 
@@ -199,12 +201,13 @@ class ScrapPage(threading.Thread):
 
 config={'url':'http://v2ex.com/?tab=all',
 'domain':'v2ex.com',
+'charset':'utf-8',
 'user_agent':'Mozilla/5.0 (Windows NT 6.3; rv:38.0) Gecko/20100101 Firefox/38.0',
 'links_css':"div.box:nth-child(2) table td:nth-child(3) .item_title a",
 'href_patten':r"/t/(\d+)#",
 'save_dir':'tmp',
 "detail_url":"http://v2ex.com/t/%s",
-'refresh_fruiqence':20}
+'refresh_fruiqence':30}
 
 savedir=config['save_dir']
 if not os.path.exists(savedir):
