@@ -202,14 +202,14 @@ class ScrapPage(threading.Thread):
 
 #t=ScrapIndex(config)
 
-config={'url':'http://v2ex.com/?tab=all',
+config={'url':'https://v2ex.com/?tab=all',
 'domain':'v2ex.com',
 'charset':'utf-8',
 'user_agent':'Mozilla/5.0 (Windows NT 6.3; rv:38.0) Gecko/20100101 Firefox/38.0',
 'links_css':"div.box:nth-child(2) table td:nth-child(3) .item_title a",
 'href_patten':r"/t/(\d+)#",
 'save_dir':'tmp',
-"detail_url":"http://v2ex.com/t/%s",
+"detail_url":"https://v2ex.com/t/%s",
 'refresh_fruiqence':30}
 
 savedir=config['save_dir']
