@@ -165,7 +165,7 @@ class ScrapPage(threading.Thread):
                 except:
                     created = User.create(name=user,password='xx')
                     user_id=created.uid
-                post,created=Post.create_or_get(post_id=int(id), node=node, title=title,author=user_id,content=content)
+                post,created=Post.get_or_create(post_id=int(id), node=node, title=title,author=user_id,content=content)
                 #print(post,created)
                 with open(filename,'r+') as f:
                     f.write(chr(32))
