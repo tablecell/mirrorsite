@@ -137,6 +137,9 @@ class ScrapPage(threading.Thread):
             page=''
             try:
                 page=fetchHtml(url,config)
+                if page.find('/restricted') > -1:
+                    page=''
+
             except:
                 print("ERROR:",url)
             if not page:
